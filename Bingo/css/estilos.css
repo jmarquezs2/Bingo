@@ -1,0 +1,142 @@
+h1{
+    font-family: 'Rye', cursive;
+    text-align: center;
+   color: rgb(240, 205, 66);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0) ;
+  }
+  header img{
+      height: 120px;
+      width: 120px;
+
+  }
+
+  .volteada{
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+header{
+    align-content: center;
+
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190828/pngtree-realistic-brown-wooden-panel-background-with-wooden-planks-image_310038.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#titulo1{
+    font-size: 50px !important; 
+}
+#titulo2{
+    font-size: 20px !important; 
+}
+
+#jugador,#carteles{
+    height: auto;
+    padding-bottom: 30px;
+
+   
+}
+#jugador{
+    background-image: url("../img/cartel.png");
+    background-size: 100% 400px;
+    background-repeat: no-repeat;
+    padding-top: 160px;
+    font-size: 25px;
+    padding-left: 35px;
+    color: rgb(240, 205, 66);
+    font-family: 'Rye', cursive;
+}
+#contenido{
+     background-color: #f4de88;
+}
+#foto{
+    margin-top: 40px;
+    width: 170px;
+    height: 170px;
+}
+#carteles div{
+   
+    font-family: 'Rye', cursive;
+    color: rgb(20, 205, 66);
+   
+    
+   
+}
+
+#casilla{
+    padding: 5px;
+    font-size: 30px;
+    border: solid 1px black;
+    text-align: center;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190828/pngtree-realistic-brown-wooden-panel-background-with-wooden-planks-image_310038.jpg");
+    background-size: 100% 100%;
+    width: 50px;
+    
+   
+}
+#marcada{
+    padding: 5px;
+    padding-right: 30px !important;
+    font-size: 20px !important;
+    border: solid 1px black;
+    text-align: center;
+    color: green !important;
+    background-color: rgb(240, 205, 66);
+    background-size: 100% 100%;
+    width: 50px;
+    
+   
+}
+
+#star{
+    width: 35px;
+    height: auto;
+    margin-bottom: 5px;
+}
+#carton{
+    margin-top: 60px;
+}
+nav{
+    height: auto;
+    background-image: url("../img/fondonav.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+button{
+    background-color: rgb(240, 205, 66) !important;
+    font-family: 'Rye', cursive !important;
+}
+.card{
+    background-image: url("../img/fondonav.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#carteles2{
+    display: none;
+}
+#carteles{
+    display: block;
+}
+@media (orientation: landscape) {
+    #carteles{
+        display: none;
+    }
+    #carteles2{
+        display: block;
+    }
+    #carteles2 div{
+   
+        font-family: 'Rye', cursive;
+      
+       color:  rgb(240, 205, 66);;
+        
+        font-size: 30px;
+    }
+    #carteles2{
+        height: auto;
+        padding-bottom: 30px;
+    
+       
+    }
+  }
