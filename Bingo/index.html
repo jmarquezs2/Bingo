@@ -1,503 +1,605 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-   
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-    <script src="js/scricpt.js"></script>
-    
-  </head>
-  <body class="container-fluid"  >
-      <div class="row">
-     <header class="col-12">
-        <div class="row" >
 
-            <div class="offset-1"></div>
-            <div class="col-3">
-                    <img src="img/revolver.png" alt="">
-            </div>
-            <h1 class="col-4 my-auto d-md-block d-none" id="titulo1">BINGO SALOON</h1>
-            <h1 class="col-4 my-auto d-sm-block d-md-none" id="titulo2">BINGO SALOON</h1>
-            <div  class="col-3 ml-auto offset text-right">
-                    <img src="img/revolver.png" class="volteada" alt="">
-  
-            </div>
-            <div class="offset-1"></div>
+<head>
+  <title>Bingo Saloon</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</head>
+
+<body class="container-fluid">
+  <div class="row">
+    <header class="col-12">
+      <div class="row">
+
+        <div class="offset-1"></div>
+        <div class="col-3">
+          <img src="img/revolver.png" alt="">
+        </div>
+        <h1 class="col-4 my-auto d-md-block d-none" id="titulo1">BINGO SALOON</h1>
+        <h1 class="col-4 my-auto d-sm-block d-md-none" id="titulo2">BINGO SALOON</h1>
+        <div class="col-3 ml-auto offset text-right">
+          <img src="img/revolver.png" class="volteada" alt="">
 
         </div>
-    
- 
-        
-    
-       
-     </header>
-     <nav class="col-md-12 d-none d-md-block py-2">
-       <div class="row">
-      <button  type="button" class="col-2 btn btn-outline-dark " onclick="partida()">Partida Nueva</button>
-      <button  type="button" class="col-2 btn btn-outline-dark   " onclick="banca()">Banca</button>
-      <button  type="button" class=" col-2 btn btn-outline-dark   "onclick="micuenta()">Mi cuenta</button>
-      <button  type="button" class=" col-2 btn btn-outline-dark   ">Iniciar Sesión</button>
-      <button  type="button" class=" col-2 btn btn-outline-dark   ">Registro</button>
-      <button  type="button" class=" col-2 btn btn-outline-dark   ">Otros juegos</button>
-    </div>
-     </nav>
-     <nav class="col-12 d-block d-md-none">
+        <div class="offset-1"></div>
+
+      </div>
+
+
+
+
+
+    </header>
+    <nav class="col-md-12 d-none d-md-block py-2" id="Login">
+      <div class="row">
+        <button type="button" class="col-12 btn btn-outline-dark " id="Registro">Registro</button>
+
+      </div>
+      <!-- Formulario -->
+      <form class="offset-4 col-4" id="formulario">
         <div class="row">
-          <button  type="button" class=" col-12 btn btn-outline-dark   " data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Abrir Menu</button>
+          <div class="form-group col-6">
+
+            <label for="exampleFormControlInput1">Nombre:</label>
+            <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre">
+
+          </div>
+          <div class="form-group col-6">
+
+            <label for="exampleFormControlInput1">Apellido:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
+
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="form-group col-6">
+
+            <label for="exampleFormControlInput1">DNI:</label>
+            <input type="text" class="form-control" name="dni" id="dni">
+          </div>
+          <div class="form-group col-6">
+
+            <label for="exampleFormControlInput1">Email:</label>
+            <input type="email" class="form-control" name="email" id="email">
+          </div>
+
+
+
+        </div>
+        <div class="row">
+
+          <div class="form-group col-12">
+
+            <label for="exampleFormControlInput1">Fecha de Cumpleaños:</label>
+            <input type="date" class="form-control" name="date" id="date">
+          </div>
+
+
+
+        </div>
+        <div class="row">
+          <div class="form-group col-3">
+
+            <label for="exampleFormControlInput1">Bonos:</label>
+            <input type="number" class="form-control" name="bonos" id="bonos">
+
+          </div>
+          <div class="form-group col-9">
+
+            <label for="exampleFormControlInput1">Tarjeta de Credito:</label>
+            <input type="text" class="form-control" name="credit" id="credit">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6">
+
+            <button type="submit" class="  btn btn-outline-dark  " id="enviarDatos">Enviar</button>
+          </div>
+          <div class="form-group col-6">
+
+            <button type="button" class="btn btn-outline-dark  " id="simular">Simular</button>
+
+          </div>
+        </div>
+       
+        
+      </form>
+
+    </nav>
+
+
+    <div id="MenuGame">
+      <nav class="col-md-12 d-none d-md-block  py-2">
+        <div class="row">
+          <button type="button" class="col-2 btn btn-outline-dark " onclick="partida()">Partida Nueva</button>
+          <button type="button" class="col-2 btn btn-outline-dark   " onclick="banca()">Banca</button>
+          <button type="button" class=" col-2 btn btn-outline-dark   " onclick="micuenta()">Mi cuenta</button>
+          <button type="button" class=" col-4 btn btn-outline-dark   " id="generar">Generar Números</button>
+          <button type="button" class=" col-2 btn btn-outline-dark   ">Otros juegos</button>
+          <div class="col-12" id="monedas"></div>
+        </div>
+      </nav>
+      <nav class="col-12 d-block d-md-none">
+        <div class="row">
+          <button type="button" class=" col-12 btn btn-outline-dark   " data-toggle="collapse"
+            href="#multiCollapseExample1" role="button" aria-expanded="false"
+            aria-controls="multiCollapseExample1">Abrir Menu</button>
           <div class="collapse multi-collapse" id="multiCollapseExample1">
             <div class="card card-body">
-             <div class="row">
-              <button  type="button" class="col-6 btn btn-outline-dark " onclick="partida()">Partida Nueva</button>
-              <button  type="button" class="col-6 btn btn-outline-dark" onclick="banca()">Banca</button>
-              <button  type="button" class=" col-6 btn btn-outline-dark   " onclick="micuenta()">Mi cuenta</button>
-              <button  type="button" class=" col-6 btn btn-outline-dark   ">Iniciar Sesión</button>
-              <button  type="button" class=" col-6 btn btn-outline-dark   ">Registro</button>
-              <button  type="button" class=" col-6 btn btn-outline-dark   ">Otros juegos</button>
+              <div class="row">
+                <button type="button" class="col-6 btn btn-outline-dark " onclick="partida()">Partida Nueva</button>
+                <button type="button" class="col-6 btn btn-outline-dark" onclick="banca()">Banca</button>
+                <button type="button" class=" col-6 btn btn-outline-dark   " onclick="micuenta()">Mi cuenta</button>
+
+                <button type="button" class=" col-6 btn btn-outline-dark   ">Otros juegos</button>
+                <button type="button" class="col-12 btn btn-outline-dark" id="generarSm">Generar Números</button>
 
 
-             </div>
+              </div>
             </div>
           </div>
         </div>
-     </nav>
-     <div id="contenido" class="col-12">
+
+      </nav>
+
+      <div id="contenido" class="col-12">
         <div class="row">
-            <section class="col-md-12 col-lg-3 col-sm-12" id="jugador">
-              
-               
-                    <span id="nombre"> Nombre: J. Wayne</span><br><br>
-                    <span id="nombre"> Botín: <span id="mano">0</span>$</span><br><br>
-                    <span id="nombre">Partida: <span id="partidaN">1</span>/5</span>
-                  
-                        
-             
-                </section>
-            <section class="col-md-12 col-lg-9 col-sm-12" id="carteles">
-              <div class="row">
-                <div class="col-md-6 col-sm-12" id="carton">
-                  <div class="row">
-                    <div class="col-12 d-flex justify-content-center">
-                     
-                       
-                        <div  id="casilla" onclick="marcar(this)" class="p-2">1</div>
-                        <div id="casilla" class="p-2" onclick="marcar(this)" >10</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" class="p-2" onclick="marcar(this)">31</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png"  id="star" alt=""></div>
-                        <div id="casilla"  class="p-2" onclick="marcar(this)">54</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
-                        <div id="casilla"  class="p-2" onclick="marcar(this)">75</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
-                        
-                  
+
+          <section class="col-md-12 col-lg-3 col-sm-12" id="jugador">
+
+
+            <span id="nombre"> Nombre:<span id="insertN"></span></span><br><br>
+            <span id="nombre"> Botín: <span id="mano"></span>$</span><br><br>
+            <span id="nombre">Partida: <span id="partidaN">1</span>/5</span>
+
+
+
+          </section>
+          <section class="col-md-12 col-lg-9 col-sm-12" id="carteles">
+            <div class="row">
+              <div class="col-md-6 col-sm-12" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)" class="p-2">1</div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">10</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">31</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">54</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">75</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+
+
                   </div>
                   <div class="col-12 d-flex justify-content-center">
-                     
-                       
-                      <div  id="casilla" onclick="marcar(this)" >4</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)" >23</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar()" >44</div>
-                      <div id="casilla" onclick="marcar(this)"  >58</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)" >86</div>
-                      
-                
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                     
-                       
-                    <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                    <div  id="casilla"  onclick="marcar(this)">17</div>
-                    <div  id="casilla"  onclick="marcar(this)">25</div>
-                    <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                    <div  id="casilla"  onclick="marcar(this)">49</div>
-                    <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                    <div  id="casilla" onclick="marcar(this)" >63</div>
-                    <div id="casilla"   onclick="marcar(this)">77</div>
-                    <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                    
-              
-              </div>
-                   
+
+
+                    <div id="casilla" onclick="marcar(this)">4</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">23</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar()">44</div>
+                    <div id="casilla" onclick="marcar(this)">58</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">86</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">17</div>
+                    <div id="casilla" onclick="marcar(this)">25</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">49</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">63</div>
+                    <div id="casilla" onclick="marcar(this)">77</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
                   </div>
 
                 </div>
-                <div class="col-md-6 col-sm-12" id="carton">
-                    <div class="row">
-                      <div class="col-12 d-flex justify-content-center">
-                       
-                         
-                          <div  id="casilla"  onclick="marcar(this)">7</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)" >33</div>
-                          <div  id="casilla" ><img src="img/star.png"  id="star" alt=""></div>
-                          <div id="casilla"   onclick="marcar(this)">58</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div id="casilla"  onclick="marcar(this)" >71</div>
-                          <div  id="casilla"  onclick="marcar(this)">85</div>
-                          
-                    
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                       
-                         
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla"  onclick="marcar(this)">10</div>
-                        <div  id="casilla"  onclick="marcar(this)">28</div>
-                        <div  id="casilla" onclick="marcar(this)" >38</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla"  onclick="marcar(this)">64</div>
-                        <div id="casilla"   onclick="marcar(this)">78</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        
-                  
-                  </div>
-                  <div class="col-12 d-flex justify-content-center">
-                       
-                         
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)"onclick="marcar(this)">16</div>
-                      <div  id="casilla" onclick="marcar(this)"onclick="marcar(this)">29</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)"onclick="marcar(this)">41</div>
-                      <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)"onclick="marcar(this)">68</div>
-                      <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)"onclick="marcar(this)">88</div>
-                      
-                
-                </div>
-                     
-                    </div>
-  
-                  </div>
-                  <div class="col-md-6 col-sm-12" id="carton">
-                      <div class="row">
-                        <div class="col-12 d-flex justify-content-center">
-                         
-                           
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" onclick="marcar(this)">12</div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" onclick="marcar(this)">36</div>
-                            <div  id="casilla" ><img src="img/star.png"  id="star" alt=""></div>
-                            <div id="casilla"  onclick="marcar(this)">51</div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div id="casilla"  onclick="marcar(this)">70</div>
-                            <div  id="casilla" onclick="marcar(this)">85</div>
-                            
-                      
-                      </div>
-                      <div class="col-12 d-flex justify-content-center">
-                         
-                           
-                          <div  id="casilla" onclick="marcar(this)">6</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)">23</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div id="casilla"  onclick="marcar(this)">55</div>
-                          <div  id="casilla" onclick="marcar(this)">66</div>
-                          <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)">89</div>
-                          
-                    
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                         
-                           
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" onclick="marcar(this)">16</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" onclick="marcar(this)">38</div>
-                        <div  id="casilla" onclick="marcar(this)">46</div>
-                        <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" onclick="marcar(this)">67</div>
-                        <div id="casilla"  onclick="marcar(this)">73</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        
-                  
-                  </div>
-                       
-                      </div>
-    
-                    </div>
-                    <div class="col-md-6 col-sm-12" id="carton">
-                        <div class="row">
-                          <div class="col-12 d-flex justify-content-center">
-                           
-                             
-                              <div  id="casilla"  onclick="marcar(this)">8</div>
-                              <div  id="casilla"  onclick="marcar(this)">12</div>
-                              <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                              <div  id="casilla" ><img src="img/star.png"  id="star" alt=""></div>
-                              <div  id="casilla" onclick="marcar(this)" >45</div>
-                              <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                              <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                              <div id="casilla"   onclick="marcar(this)">72</div>
-                              <div  id="casilla"  onclick="marcar(this)">84</div>
-                              
-                        
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                           
-                             
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" onclick="marcar(this)">25</div>
-                            <div  id="casilla" onclick="marcar(this)">33</div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div id="casilla"  onclick="marcar(this)">52</div>
-                            <div  id="casilla" onclick="marcar(this)">67</div>
-                            <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" onclick="marcar(this)">86</div>
-                            
-                      
-                      </div>
-                      <div class="col-12 d-flex justify-content-center">
-                           
-                             
-                          <div  id="casilla" onclick="marcar(this)">9</div>
-                          <div  id="casilla" onclick="marcar(this)">14</div>
-                          <div  id="casilla" onclick="marcar(this)">27</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)">47</div>
-                          <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div id="casilla"  onclick="marcar(this)">76</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          
-                    
-                    </div>
-                         
-                        </div>
-      
-                      </div>
-                </div>
-            </section>
-            <section class="col-md-12 col-lg-9 col-sm-12" id="carteles2">
-              <div class="row">
-                <div class="col-6" id="carton">
-                  <div class="row">
-                    <div class="col-12 d-flex justify-content-center">
-                     
-                       
-                        <div  id="casilla" class="p-2" onclick="marcar(this)">1</div>
-                        <div id="casilla" class="p-2" onclick="marcar(this)">10</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" class="p-2" onclick="marcar(this)">31</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png"  id="star" alt=""></div>
-                        <div id="casilla"  class="p-2" onclick="marcar(this)">54</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
-                        <div id="casilla"  class="p-2" onclick="marcar(this)">75</div>
-                        <div  id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
-                        
-                  
-                  </div>
-                  <div class="col-12 d-flex justify-content-center">
-                     
-                       
-                      <div  id="casilla" onclick="marcar(this)">4</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)">23</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)">44</div>
-                      <div id="casilla"  onclick="marcar(this)">58</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)">86</div>
-                      
-                
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                     
-                       
-                    <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                    <div  id="casilla" onclick="marcar(this)">17</div>
-                    <div  id="casilla" onclick="marcar(this)">25</div>
-                    <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                    <div  id="casilla" onclick="marcar(this)">49</div>
-                    <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                    <div  id="casilla" onclick="marcar(this)">63</div>
-                    <div id="casilla"  onclick="marcar(this)">77</div>
-                    <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                    
-              
+
               </div>
-                   
+              <div class="col-md-6 col-sm-12" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">7</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">33</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">58</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">71</div>
+                    <div id="casilla" onclick="marcar(this)">85</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">10</div>
+                    <div id="casilla" onclick="marcar(this)">28</div>
+                    <div id="casilla" onclick="marcar(this)">38</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">64</div>
+                    <div id="casilla" onclick="marcar(this)">78</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)" onclick="marcar(this)">16</div>
+                    <div id="casilla" onclick="marcar(this)" onclick="marcar(this)">29</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)" onclick="marcar(this)">41</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)" onclick="marcar(this)">68</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)" onclick="marcar(this)">88</div>
+
+
                   </div>
 
                 </div>
-                <div class="col-6" id="carton">
-                    <div class="row">
-                      <div class="col-12 d-flex justify-content-center">
-                       
-                         
-                          <div  id="casilla" onclick="marcar(this)">7</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)">33</div>
-                          <div  id="casilla" ><img src="img/star.png"  id="star" alt=""></div>
-                          <div id="casilla"  onclick="marcar(this)">58</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div id="casilla"  onclick="marcar(this)">71</div>
-                          <div  id="casilla" onclick="marcar(this)">85</div>
-                          
-                    
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                       
-                         
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla"  onclick="marcar(this)">10</div>
-                        <div  id="casilla" onclick="marcar(this)" >28</div>
-                        <div  id="casilla"  onclick="marcar(this)">38</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla"  onclick="marcar(this)">64</div>
-                        <div id="casilla"   onclick="marcar(this)">78</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        
-                  
+
+              </div>
+              <div class="col-md-6 col-sm-12" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">12</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">36</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">51</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">70</div>
+                    <div id="casilla" onclick="marcar(this)">85</div>
+
+
                   </div>
                   <div class="col-12 d-flex justify-content-center">
-                       
-                         
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)">16</div>
-                      <div  id="casilla" onclick="marcar(this)">29</div>
-                      <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)">41</div>
-                      <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)">68</div>
-                      <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                      <div  id="casilla" onclick="marcar(this)">88</div>
-                      
-                
-                </div>
-                     
-                    </div>
-  
+
+
+                    <div id="casilla" onclick="marcar(this)">6</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">23</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">55</div>
+                    <div id="casilla" onclick="marcar(this)">66</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">89</div>
+
+
                   </div>
-                  <div class="col-6" id="carton">
-                      <div class="row">
-                        <div class="col-12 d-flex justify-content-center">
-                         
-                           
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" onclick="marcar(this)">12</div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" onclick="marcar(this)">36</div>
-                            <div  id="casilla" ><img src="img/star.png"  id="star" alt=""></div>
-                            <div id="casilla"  onclick="marcar(this)">51</div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div id="casilla"  onclick="marcar(this)">70</div>
-                            <div  id="casilla" onclick="marcar(this)">85</div>
-                            
-                      
-                      </div>
-                      <div class="col-12 d-flex justify-content-center">
-                         
-                           
-                          <div  id="casilla" onclick="marcar(this)">6</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)">23</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div id="casilla"  onclick="marcar(this)">55</div>
-                          <div  id="casilla" onclick="marcar(this)">66</div>
-                          <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)">89</div>
-                          
-                    
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                         
-                           
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" onclick="marcar(this)">16</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" onclick="marcar(this)">38</div>
-                        <div  id="casilla" onclick="marcar(this)">46</div>
-                        <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                        <div  id="casilla" onclick="marcar(this)">67</div>
-                        <div id="casilla" onclick="marcar(this)" >73</div>
-                        <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                        
-                  
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">16</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">38</div>
+                    <div id="casilla" onclick="marcar(this)">46</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">67</div>
+                    <div id="casilla" onclick="marcar(this)">73</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
                   </div>
-                       
-                      </div>
-    
-                    </div>
-                    <div class="col-6" id="carton">
-                        <div class="row">
-                          <div class="col-12 d-flex justify-content-center">
-                           
-                             
-                              <div  id="casilla" onclick="marcar(this)">8</div>
-                              <div  id="casilla" onclick="marcar(this)">12</div>
-                              <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                              <div  id="casilla" ><img src="img/star.png"  id="star" alt=""></div>
-                              <div  id="casilla" onclick="marcar(this)">45</div>
-                              <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                              <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                              <div id="casilla"  onclick="marcar(this)">72</div>
-                              <div  id="casilla" onclick="marcar(this)">84</div>
-                              
-                        
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                           
-                             
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla" onclick="marcar(this)" >25</div>
-                            <div  id="casilla"  onclick="marcar(this)">33</div>
-                            <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                            <div id="casilla"   onclick="marcar(this)">52</div>
-                            <div  id="casilla"  onclick="marcar(this)">67</div>
-                            <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                            <div  id="casilla"  onclick="marcar(this)">86</div>
-                            
-                      
-                      </div>
-                      <div class="col-12 d-flex justify-content-center">
-                           
-                             
-                          <div  id="casilla" onclick="marcar(this)">9</div>
-                          <div  id="casilla" onclick="marcar(this)">14</div>
-                          <div  id="casilla" onclick="marcar(this)">27</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" onclick="marcar(this)">47</div>
-                          <div id="casilla"  ><img src="img/star.png" id="star" alt=""></div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          <div id="casilla"  onclick="marcar(this)">76</div>
-                          <div  id="casilla" ><img src="img/star.png" id="star" alt=""></div>
-                          
-                    
-                    </div>
-                         
-                        </div>
-      
-                      </div>
+
                 </div>
-            </section>
+
+              </div>
+              <div class="col-md-6 col-sm-12" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">8</div>
+                    <div id="casilla" onclick="marcar(this)">12</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">45</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">72</div>
+                    <div id="casilla" onclick="marcar(this)">84</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">25</div>
+                    <div id="casilla" onclick="marcar(this)">33</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">52</div>
+                    <div id="casilla" onclick="marcar(this)">67</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">86</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">9</div>
+                    <div id="casilla" onclick="marcar(this)">14</div>
+                    <div id="casilla" onclick="marcar(this)">27</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">47</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">76</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <section class="col-md-12 col-lg-9 col-sm-12" id="carteles2">
+            <div class="row">
+              <div class="col-6" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" class="p-2" onclick="marcar(this)">1</div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">10</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">31</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">54</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" class="p-2" onclick="marcar(this)">75</div>
+                    <div id="casilla" class="p-2"><img src="img/star.png" id="star" alt=""></div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">4</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">23</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">44</div>
+                    <div id="casilla" onclick="marcar(this)">58</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">86</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">17</div>
+                    <div id="casilla" onclick="marcar(this)">25</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">49</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">63</div>
+                    <div id="casilla" onclick="marcar(this)">77</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-6" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">7</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">33</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">58</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">71</div>
+                    <div id="casilla" onclick="marcar(this)">85</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">10</div>
+                    <div id="casilla" onclick="marcar(this)">28</div>
+                    <div id="casilla" onclick="marcar(this)">38</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">64</div>
+                    <div id="casilla" onclick="marcar(this)">78</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">16</div>
+                    <div id="casilla" onclick="marcar(this)">29</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">41</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">68</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">88</div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-6" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">12</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">36</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">51</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">70</div>
+                    <div id="casilla" onclick="marcar(this)">85</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">6</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">23</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">55</div>
+                    <div id="casilla" onclick="marcar(this)">66</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">89</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">16</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">38</div>
+                    <div id="casilla" onclick="marcar(this)">46</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">67</div>
+                    <div id="casilla" onclick="marcar(this)">73</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-6" id="carton">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">8</div>
+                    <div id="casilla" onclick="marcar(this)">12</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">45</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">72</div>
+                    <div id="casilla" onclick="marcar(this)">84</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">25</div>
+                    <div id="casilla" onclick="marcar(this)">33</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">52</div>
+                    <div id="casilla" onclick="marcar(this)">67</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">86</div>
+
+
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+
+
+                    <div id="casilla" onclick="marcar(this)">9</div>
+                    <div id="casilla" onclick="marcar(this)">14</div>
+                    <div id="casilla" onclick="marcar(this)">27</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">47</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+                    <div id="casilla" onclick="marcar(this)">76</div>
+                    <div id="casilla"><img src="img/star.png" id="star" alt=""></div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </section>
         </div>
-     </div>
-     
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  </div>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
