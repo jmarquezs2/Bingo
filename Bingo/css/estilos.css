@@ -129,7 +129,7 @@ button{
    
         font-family: 'Rye', cursive;
       
-       color:  rgb(240, 205, 66);;
+       color:  rgb(240, 205, 66);
         
         font-size: 30px;
     }
@@ -140,3 +140,45 @@ button{
        
     }
   }
+html{
+    background-color:#f4de88;
+}
+
+  /*CSS para JQUERY */
+
+
+#MenuGame{
+    display: none ;
+}
+
+form{
+    font-family: 'Rye', cursive;
+    background-color:#f4de88;
+    margin-left: 25%;
+    display: none ;
+}
+
+#moneda{
+    font-size:45px;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    padding: 7px;
+    padding-left: 10px;
+    width: 70px !important;
+    height: 70px !important;
+    font-family: 'Rye', cursive;
+    background-image: url(../img/moneda.png);
+}
+
+.error{
+    font-family: 'Rye', cursive;
+    color:green;
+
+}
+.error input{
+    background-color: red;
+}
+.error:hover{
+
+    color: red;
+}
