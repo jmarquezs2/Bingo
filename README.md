@@ -3,7 +3,8 @@ Página Web de bingo con Bootstrap y JavaScript
 
 
 <b>Formulario<b><br>
-  Para practicar con jquery y jquery validation, se ha incorporado un formulario con validación automatica y que se expande y se contrae de forma dinamica mediante metodos jquery que se encuentran en el archivo ".js".
+
+  Para practicar con Jquery y Jquery validation, se ha incorporado un formulario con validación automatica y que se expande y se contrae de forma dinamica mediante metodos jquery que se encuentran en el archivo ".js".
   Hay dos botones. Uno de ellos hace submit al formulario y verifica la validación, luego recarga la página. Otro hace la función de simular que se ha registrado un usuario, ignora l validación del formulario y recoge cualquier entrada y pasa a mostrar la web con los datos introducidos en  el tablón del jugador y en el botón de "Mi cuenta". Los datos introducidos solo sirven para esto último, no se enviaran a ninguna parte ni se usaran para otro fin.
 
 
