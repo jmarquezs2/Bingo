@@ -1,6 +1,12 @@
 # Bingo Saloon
 Página Web de bingo con Bootstrap y JavaScript
 
+
+<b>Formulario<b>
+  Para practicar con jquery y jquery validation, se ha incorporado un formulario con validación automatica y que se expande y se contrae de forma dinamica mediante metodos jquery que se encuentran en el archivo ".js".
+  Hay dos botones. Uno de ellos hace submit al formulario y verifica la validación, luego recarga la página. Otro hace la función de simular que se ha registrado un usuario, ignora l validación del formulario y recoge cualquier entrada y pasa a mostrar la web con los datos introducidos en  el tablón del jugador y en el botón de "Mi cuenta". Los datos introducidos solo sirven para esto último, no se enviaran a ninguna parte ni se usaran para otro fin.
+
+
 <b>Menu de navegación</b> <br>
 El botón "Partida nueva" restablece todas las casillas que hayan sido marcadas a la normalidad. Además suma una partida en el tablón del jugador.<br><br>
 El botón Banca añade un sistema de banco virtual. Podemos sacar dinero para agragarlo a la mano ( represetanda por "Botín" en el tablón del jugador) o ingresar dinero de esta al banco. Si queremos añadir dinero debemos responder con la palabra "ingresar" y si queremos retirar dinero usamos la palabra "sacar". Luego se escribe la cantidad deseada y se comprueba si es posible hacer la actividad.<br><br>
